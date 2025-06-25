@@ -1,0 +1,69 @@
+name: Build and Deploy SettleUp to GitHub Pages
+
+on:
+  # Triggers the workflow on push events but only for the main branch
+  push:
+    branches:
+      - main  # Adjust this if your default branch is different (e.g., master)
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Using a recent LTS version
+
+      - name: Install dependencies
+        run: npm install # This will install esbuild from your package.json devDependencies
+
+      - name: Build application
+        run: |
+          ./node_modules/.bin/esbuild index.tsx --bundle --outfile=dist/bundle.js --format=esm --jsx=automatic
+          echo "Build complete. Output in dist/bundle.js"
+          ls -R # List files to verify structure (optional, for debugging)
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload the root directory. This should contain:
+          # - index.html
+          # - dist/bundle.js
+          # - metadata.json
+          # (and any other static assets you might add at the root, like an images folder)
+          path: '.'
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build # This job depends on the 'build' job completing successfully
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
