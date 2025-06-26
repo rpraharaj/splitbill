@@ -88,7 +88,7 @@ const ExpenseTableRow: React.FC<ExpenseTableRowProps> = ({
               <TrashIcon className="w-4 h-4" />
             </button>
           </div>
-        ) : <span className="text-xs text-gray-400 dark:text-gray-500">N/A</span>}
+        ) : <span className="text-xs text-gray-400 dark:text-gray-400">N/A</span>}
       </td>
     </tr>
   );

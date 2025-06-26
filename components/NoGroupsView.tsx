@@ -38,7 +38,7 @@ const NoGroupsView: React.FC<NoGroupsViewProps> = ({ onInitiateCreateGroup, appM
                  // This part should ideally not be reached if App.tsx handles the error state correctly.
                  // It's a defensive message.
                  <>
-                    <BuildingOfficeIcon className="w-24 h-24 text-gray-400 dark:text-gray-500 mb-6"/>
+                    <BuildingOfficeIcon className="w-24 h-24 text-gray-400 dark:text-gray-400 mb-6"/>
                     <h1 className="text-3xl font-bold mb-3 dark:text-white">
                         Application Not Available
                     </h1>

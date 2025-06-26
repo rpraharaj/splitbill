@@ -137,7 +137,7 @@ const BillsView: React.FC<BillsViewProps> = ({
         )
       ) : (
         <div className="bg-white dark:bg-darkSurface shadow-lg rounded-xl p-10 text-center">
-          <CalendarDaysIcon className="w-16 h-16 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
+          <CalendarDaysIcon className="w-16 h-16 text-gray-400 dark:text-gray-400 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-gray-700 dark:text-darkText mb-2">No Bills Yet</h3>
           <p className="text-gray-500 dark:text-darkMuted mb-6">
             Get started by adding the first bill for this group.

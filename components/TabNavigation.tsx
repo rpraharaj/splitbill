@@ -65,7 +65,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onSetTab, isMo
                         }`}
             aria-current={isActive ? 'page' : undefined}
           >
-            <IconComponent className={`w-5 h-5 mr-2 ${isActive ? 'text-primary-500 dark:text-primary-400' : 'text-gray-400 dark:text-gray-500 group-hover:text-gray-500 dark:group-hover:text-gray-400'}`} />
+            <IconComponent className={`w-5 h-5 mr-2 ${isActive ? 'text-primary-500 dark:text-primary-400' : 'text-gray-400 dark:text-gray-400 group-hover:text-gray-500 dark:group-hover:text-gray-300'}`} />
             {tab.label}
           </button>
         );
