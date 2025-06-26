@@ -65,7 +65,7 @@ const SpendAnalyser: React.FC<SpendAnalyserProps> = ({ expenses, members, users,
   const listContainerHeight = "max-h-60"; // Consistent height for scrollable lists
 
   return (
-    <div className="bg-white dark:bg-darkSurface shadow-xl rounded-xl p-6 space-y-8 animate-fade-in-item">
+    <div className="bg-white dark:bg-darkSurface shadow-xl rounded-xl p-4 sm:p-6 space-y-8 animate-fade-in-item">
       <div className="pb-4 border-b border-gray-200 dark:border-gray-600">
         <h2 className="text-2xl font-semibold text-gray-800 dark:text-darkText">Spend Analyser</h2>
         {/* "Close Analyser" button removed */}

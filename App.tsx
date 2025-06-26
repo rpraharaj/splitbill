@@ -503,21 +503,21 @@ const AppLogicContainer: React.FC<AppLogicContainerProps> = ({
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-darkBg text-gray-900 dark:text-darkText transition-colors duration-300 flex flex-col">
+    <div className="min-h-screen bg-gray-100 dark:bg-darkBg text-gray-900 dark:text-darkText transition-colors duration-300 flex flex-col text-sm sm:text-base">
       <NotificationContainer notifications={notifications} onRemoveNotification={removeNotification} />
       <Header currentGroupId={currentGroupId} allGroups={userVisibleGroups} darkMode={darkMode} onSetCurrentGroupId={setCurrentGroupId} onInitiateCreateGroup={initiateCreateGroupProcess} onSetDarkMode={setDarkMode} onShowGlobalSettingsModal={() => setShowGlobalSettingsModal(true)} appMode="offline" setAppMode={setAppMode} onShowSetUserNameModal={() => setShowSetUserNameModal(true)} currentUser={currentUser} />
 
     {shouldShowContent ? (
       <>
         {currentGroup && (<div className="hidden md:block sticky top-[80px] z-30 bg-white dark:bg-darkSurface shadow-sm"><nav className="container mx-auto"><TabNavigation activeTab={activeTab} onSetTab={setActiveTab} isMobile={false} /></nav></div>)}
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        <main className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-6 flex-grow">
           {currentGroup && (<div className="mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between"><div className="flex items-center space-x-3 mb-3 sm:mb-0">{currentGroup.name.includes("Apartment") ? <BuildingOfficeIcon className="w-8 h-8 text-primary-500 dark:text-primary-400"/> : <UsersIcon className="w-8 h-8 text-primary-500 dark:text-primary-400"/>}<h2 className="text-2xl font-semibold text-gray-700 dark:text-darkText">Group: {currentGroup.name}</h2></div></div>)}
           {renderActiveTabView()}
         </main>
         {currentGroup && (<div className="md:hidden"><TabNavigation activeTab={activeTab} onSetTab={setActiveTab} isMobile={true} /></div>)}
       </>
      ) : ( 
-        <main className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow flex flex-col items-center justify-center">
+        <main className="container mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-6 flex-grow flex flex-col items-center justify-center">
             <ExclamationTriangleIcon className="w-12 h-12 text-yellow-500 mb-4" /> <h2 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">Application Error</h2>
             <p className="text-gray-600 dark:text-darkMuted"> SettleUp is not configured correctly. Please contact support. </p>
         </main>
@@ -600,7 +600,7 @@ const AppContent: React.FC<AppContentProps> = ({ initialAppModeFromIndex }) => {
 
   if (!appConfig.enableOfflineMode) { 
     return (
-        <div className="min-h-screen bg-gray-100 dark:bg-darkBg flex flex-col items-center justify-center p-6 text-center">
+        <div className="min-h-screen bg-gray-100 dark:bg-darkBg flex flex-col items-center justify-center p-4 sm:p-6 text-center">
             <NotificationContainer notifications={notifications} onRemoveNotification={removeNotification} />
             <ExclamationTriangleIcon className="w-16 h-16 text-red-500 mb-4" />
             <h1 className="text-2xl font-semibold text-gray-800 dark:text-white mb-2">Application Configuration Error</h1>

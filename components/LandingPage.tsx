@@ -18,7 +18,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onSelectMode }) => {
   const numberOfCards = showLocalCard ? 1 : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-600 to-primary-800 dark:from-gray-800 dark:to-gray-900 flex flex-col justify-center items-center p-6 text-white antialiased overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-primary-600 to-primary-800 dark:from-gray-800 dark:to-gray-900 flex flex-col justify-center items-center p-4 sm:p-6 text-white antialiased overflow-hidden">
       <div className="text-center mb-10 sm:mb-16">
         <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 tracking-tight animate-fade-in-item" style={{ animationDelay: '0.1s' }}>
           SettleUp

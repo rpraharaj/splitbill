@@ -53,7 +53,7 @@ export const Header: React.FC<HeaderProps> = ({
 
     return (
         <header className="bg-primary-600 dark:bg-gray-800 text-white shadow-md sticky top-0 z-40">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <div className="container mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex justify-between items-center">
                 <div className="flex items-center">
                     <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">SettleUp</h1>
                     {/* Mode display text removed from here */}

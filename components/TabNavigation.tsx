@@ -20,7 +20,7 @@ const TabNavigation: React.FC<TabNavigationProps> = ({ activeTab, onSetTab, isMo
   if (isMobile) {
     return (
       <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-darkSurface border-t border-gray-200 dark:border-gray-700 shadow-top z-30">
-        <div className="flex justify-around items-center h-16">
+        <div className="flex justify-around items-center h-12">
           {tabConfig.map((tab) => {
             const isActive = activeTab === tab.id;
             const IconComponent = tab.icon;
