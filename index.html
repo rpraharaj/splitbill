@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SettleUp - Professional Bill Splitting</title>
 
+    <script>
+      try {
+        const settings = JSON.parse(localStorage.getItem('settleUpAppGeneralSettings_v4_mode') || '{}');
+        if (settings.darkMode) document.documentElement.classList.add('dark');
+      } catch (e) {
+        console.error('Failed to apply saved theme', e);
+      }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
