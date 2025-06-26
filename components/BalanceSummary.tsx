@@ -211,7 +211,7 @@ export const BalanceSummary: React.FC<BalanceSummaryProps> = ({
                 {lowestPayerAmongPayers && topPayer?.userId !== lowestPayerAmongPayers.userId && ( 
                     <div className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                         <span className="flex items-center text-gray-700 dark:text-darkText">
-                           <BanknotesIcon className="w-5 h-5 mr-2 text-gray-400 dark:text-gray-500 opacity-70" /> Lowest Payer (Among Payers):
+                           <BanknotesIcon className="w-5 h-5 mr-2 text-gray-400 dark:text-gray-400 opacity-70" /> Lowest Payer (Among Payers):
                         </span>
                         <strong className="text-gray-800 dark:text-white">{lowestPayerAmongPayers.name.split(' ')[0]} ({formatCurrency(lowestPayerAmongPayers.amount, selectedCurrency)})</strong>
                     </div>

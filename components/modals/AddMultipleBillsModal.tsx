@@ -96,7 +96,7 @@ const AddMultipleBillsModal: React.FC<AddMultipleBillsModalProps> = ({
               key={entry.id} 
               className="flex flex-nowrap items-center gap-1 sm:gap-1.5 p-2 border border-gray-200 dark:border-gray-600 rounded-lg shadow-sm bg-gray-50 dark:bg-gray-700/30 min-w-[700px] sm:min-w-0" // min-w for horizontal scroll content
             >
-              <span className="flex-shrink-0 text-xs font-semibold text-gray-400 dark:text-gray-500 w-7 sm:w-8 text-center">#{index + 1}</span>
+              <span className="flex-shrink-0 text-xs font-semibold text-gray-400 dark:text-gray-400 w-7 sm:w-8 text-center">#{index + 1}</span>
               <input
                 type="date"
                 value={entry.date} // Value is YYYY-MM-DD

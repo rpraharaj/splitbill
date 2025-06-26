@@ -69,7 +69,7 @@ const MembersView: React.FC<MembersViewProps> = ({ group, onShowGroupSettingsMod
                     className="w-10 h-10 rounded-full object-cover mr-3 border-2 border-gray-200 dark:border-gray-600"
                     />
                 ) : (
-                    <DefaultUserIcon className="w-10 h-10 text-gray-400 dark:text-gray-500 mr-3 p-1 bg-gray-200 dark:bg-gray-600 rounded-full" />
+                    <DefaultUserIcon className="w-10 h-10 text-gray-400 dark:text-gray-300 mr-3 p-1 bg-gray-200 dark:bg-gray-600 rounded-full" />
                 )}
                 <div>
                     <p className="font-medium text-gray-800 dark:text-darkText">
