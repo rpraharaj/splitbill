@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ currentUser, appMode }) => {
 
 
     return (
-        <footer className="text-center py-8 mt-12 border-t border-gray-200 dark:border-gray-700">
+        <footer className="text-center py-4 sm:py-8 mt-8 sm:mt-12 border-t border-gray-200 dark:border-gray-700">
             <p className="text-sm text-gray-500 dark:text-darkMuted">&copy; {new Date().getFullYear()} SettleUp. {displayMessage}
             </p>
         </footer>

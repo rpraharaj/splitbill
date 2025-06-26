@@ -44,7 +44,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children, size = 
             <XMarkIcon className="w-6 h-6" />
           </button>
         </div>
-        <div className="p-5 sm:p-6">{children}</div>
+        <div className="p-4 sm:p-6">{children}</div>
       </div>
     </div>
   );
