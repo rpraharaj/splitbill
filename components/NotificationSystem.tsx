@@ -33,7 +33,11 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         {icon}
         <p className="ml-3 text-sm font-medium">{notification.message}</p>
       </div>
-      <button onClick={() => onRemove(notification.id)} className="ml-auto -mx-1.5 -my-1.5 p-1.5 rounded-lg inline-flex h-8 w-8 hover:bg-white/20 focus:ring-2 focus:ring-white/30" aria-label="Dismiss notification">
+      <button
+        onClick={() => onRemove(notification.id)}
+        className="ml-auto -mx-1.5 -my-1.5 p-1.5 rounded-lg inline-flex h-8 w-8 hover:bg-white/20 dark:hover:bg-gray-700/40 focus:ring-2 focus:ring-white/30 dark:focus:ring-gray-500"
+        aria-label="Dismiss notification"
+      >
         <CloseIcon className="w-5 h-5" />
       </button>
     </div>
